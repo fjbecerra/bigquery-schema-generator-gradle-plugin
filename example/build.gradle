@@ -1,24 +1,24 @@
 apply plugin: 'scala'
 apply plugin: 'java'
-apply plugin: 'com.pakius.bqSchemaGenerator'
+//apply plugin: 'com.pakius.bqSchemaGenerator'
 
 
-bqSchemaGenerator.dependsOn build
+//bqSchemaGenerator.dependsOn build
+//
+//BqSchemaGeneratorPlugin {
+//    classNameList = ["com.pojos.BqPojo", "com.pojos.BqPojo2"]
+//    output = "schema"
+//}
 
-BqSchemaGeneratorPlugin {
-    classNameList = ["com.pojos.BqPojo", "com.pojos.BqPojo2"]
-    output = "schema"
-}
-
-buildscript {
-
-    repositories {
-        mavenLocal()
-        mavenCentral()
-
-    }
-
-    dependencies {
-        classpath "com.pakius:bq-schema-generator-plugin:1.0.0-SNAPSHOT"
-    }
-}
+//buildscript {
+//
+//    repositories {
+//        mavenLocal()
+//        mavenCentral()
+//
+//    }
+//
+//    dependencies {
+//        classpath "com.pakius:bq-schema-generator-plugin:1.0.0-SNAPSHOT"
+//    }
+//}

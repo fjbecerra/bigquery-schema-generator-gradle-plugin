@@ -1,0 +1,11 @@
+*.class
+*.log
+*.DS_Store*
+# gradle specific
+.gradle/
+*/build/
+schema/*
+
+#Ide
+.idea
+

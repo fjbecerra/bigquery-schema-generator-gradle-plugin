@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: "com.github.maiflai.scalatest"
+
+
+
+dependencies {
+   compile gradleApi()
+    compile group: 'io.github.classgraph', name: 'classgraph', version: '4.8.65'
+    compile project(':bq-schema-generator')
+    testCompile 'junit:junit:4.12'
+}
+
+

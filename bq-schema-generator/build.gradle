@@ -1,0 +1,11 @@
+apply plugin: 'scala'
+apply plugin: 'java'
+apply plugin: "com.github.maiflai.scalatest"
+
+
+dependencies {
+
+    compile group: 'com.google.cloud', name: 'google-cloud-bigquery', version: '1.108.1'
+
+}
+

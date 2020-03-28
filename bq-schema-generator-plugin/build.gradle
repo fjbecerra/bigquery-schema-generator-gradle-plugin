@@ -2,8 +2,27 @@ apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: "com.github.maiflai.scalatest"
+apply plugin: 'java-gradle-plugin'
+apply plugin: "com.gradle.plugin-publish"
 
 
+
+
+pluginBundle {
+    website = 'https://github.com/fjbecerra/bigquery-schema-generator-gradle-plugin/blob/master/README.md'
+    vcsUrl = 'https://github.com/fjbecerra/bigquery-schema-generator-gradle-plugin.git'
+    tags = ['biqquery', 'bigquery-schema', 'java-pojo-to-bigquey-schema']
+}
+gradlePlugin {
+    plugins {
+        gradletestPlugin {
+            id = 'com.pakius.bqSchemaGenerator'
+            displayName = 'Plugin for generate Bigquery schema json out of Java POJO classses'
+            description = 'A plugin that helps to generate Bigquery schema'
+            implementationClass = 'com.pakius.BqSchemaGeneratorPlugin'
+        }
+    }
+}
 
 dependencies {
    compile gradleApi()

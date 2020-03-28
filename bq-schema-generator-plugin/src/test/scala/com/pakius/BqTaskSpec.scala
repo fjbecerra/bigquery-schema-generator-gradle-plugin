@@ -17,7 +17,7 @@ class BqTaskSpec extends FlatSpec with Matchers{
     val extension = project.getExtensions.getByName("BqSchemaGeneratorPlugin").asInstanceOf[BqSchemaGeneratorPluginExtension]
     extension.setClassNameList(util.Arrays.asList("com.pojos.BqPojo"))
     extension.setOutput("src/test/resources/schemas")
-    extension.setJarLocation(new File("src/test/resources/example-1.0.0-SNAPSHOT.jar_").getAbsolutePath)
+    extension.setJarLocation(new File("src/test/resources/example-1.0.0-SNAPSHOT.jar").getAbsolutePath)
     val bqTask = project.getTasks.getByPath("bqSchemaGenerator").asInstanceOf[BqTask]
     bqTask.parse()
     val content = Source.fromFile("src/test/resources/schemas/BqPojo.json").mkString

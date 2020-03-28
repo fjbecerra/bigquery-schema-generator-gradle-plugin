@@ -2,8 +2,7 @@ apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: "com.github.maiflai.scalatest"
-apply plugin: 'java-gradle-plugin'
-apply plugin: "com.gradle.plugin-publish"
+
 
 
 

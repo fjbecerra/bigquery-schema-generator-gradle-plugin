@@ -1,4 +1,4 @@
-# BigQuery Schema Generator Gradle Plugin
+# Google BigQuery Schema Generator Gradle Plugin
 
 Gradle plugin for generating BQ schemas in json format given a Java POJO class
 

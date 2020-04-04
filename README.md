@@ -12,7 +12,7 @@ Using the plugins DSL:
 
 ```
 plugins {
-  id "com.pakius.bqSchemaGenerator" version "1.0.2-SNAPSHOT"
+  id "com.pakius.bqSchemaGenerator" version "1.0.0"
 }
 
 ```
@@ -28,7 +28,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "com.pakius:bq-schema-generator-plugin:1.0.2-SNAPSHOT"
+    classpath "com.pakius:bq-schema-generator-plugin:1.0.0"
   }
 }
 
@@ -41,8 +41,10 @@ apply plugin: "com.pakius.bqSchemaGenerator"
 **Attributes** | *Description*
 --- | ---
 classNameList | List of Classes name
-outputName | Folder where Bigquery JSONs schemas are created.
+output | Folder where Bigquery JSONs schemas are created.
 jarLocation (Optional) | Location of the jar containing POJO classes, default gradle build location.
+   
+**Task:** bqSchemaGenerator  
                            
 Example 1.
 
@@ -51,7 +53,7 @@ bqSchemaGenerator.dependsOn build
 
 BqSchemaGeneratorPlugin {
     classNameList = ["com.pojos.BqPojo", "com.pojos.BqPojo2"]
-    outputName = "schema"
+    output = "schema"
 }
 ```
 
@@ -62,11 +64,13 @@ bqSchemaGenerator.dependsOn build
 
 BqSchemaGeneratorPlugin {
     classNameList = ["com.pojos.BqPojo", "com.pojos.BqPojo2"]
-    outputName = "schema"
+    output = "schema"
     jarLocation = "/home/pojos-1.0.0.jar"
 }
 
 ```
+
+`./gradlew :example:bqSchemaGenerator`
 
 ## More Information
 

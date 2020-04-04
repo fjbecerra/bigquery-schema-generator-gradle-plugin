@@ -1,4 +1,4 @@
-package com.pakius
+package com.pakius.parser
 
 trait SchemaParser[I, O] {
   def parse(input: I):O

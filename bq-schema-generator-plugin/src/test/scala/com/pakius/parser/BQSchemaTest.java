@@ -1,4 +1,4 @@
-package com.pakius;
+package com.pakius.parser;
 
 import java.util.List;
 

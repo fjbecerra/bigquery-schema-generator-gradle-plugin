@@ -1,4 +1,3 @@
-include ':bq-schema-generator',
-         ':bq-schema-generator-plugin',
-         ':example'
+include ':bq-schema-generator-plugin',
+        ':example'
 

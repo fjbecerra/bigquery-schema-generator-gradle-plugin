@@ -1,4 +1,4 @@
-package com.pakius
+package com.pakius.plugin
 
 import java.io.File
 import java.util
@@ -13,7 +13,7 @@ class BqTaskSpec extends FlatSpec with Matchers{
 
   it should "be able to add task to project" in {
     val project = ProjectBuilder.builder().build()
-    project.getPlugins.apply("com.pakius.bqSchemaGenerator")
+    project.getPlugins.apply("com.pakius.plugin.bqSchemaGenerator")
     val extension = project.getExtensions.getByName("BqSchemaGeneratorPlugin").asInstanceOf[BqSchemaGeneratorPluginExtension]
     extension.setClassNameList(util.Arrays.asList("com.pojos.BqPojo"))
     extension.setOutput("src/test/resources/schemas")

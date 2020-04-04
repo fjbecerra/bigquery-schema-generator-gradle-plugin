@@ -1,8 +1,8 @@
-package com.pakius
+package com.pakius.parser
 
 import org.scalatest.{FlatSpec, Matchers}
-import com.pakius.SchemaParserInstance._
-import com.pakius.SchemaParserImpl._
+import com.pakius.parser.SchemaParserImpl._
+import com.pakius.parser.SchemaParserInstance._
 
 class SchemaParserSpec extends FlatSpec with Matchers{
 

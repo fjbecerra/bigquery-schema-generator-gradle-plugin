@@ -10,7 +10,7 @@ apply plugin: "com.github.maiflai.scalatest"
 pluginBundle {
     website = 'https://github.com/fjbecerra/bigquery-schema-generator-gradle-plugin/blob/master/README.md'
     vcsUrl = 'https://github.com/fjbecerra/bigquery-schema-generator-gradle-plugin.git'
-    tags = ['biqquery', 'bigquery-schema', 'java-pojo-to-bigquey-schema']
+    tags = ['google-biqquery', 'bigquery' ,'bigquery-schema', 'pojos-to-bigquery-schema', 'java-pojo-to-bigquey-schema']
 }
 gradlePlugin {
     plugins {
@@ -18,15 +18,14 @@ gradlePlugin {
             id = 'com.pakius.bqSchemaGenerator'
             displayName = 'Plugin for generate Bigquery schema json out of Java POJO classses'
             description = 'A plugin that helps to generate Bigquery schema'
-            implementationClass = 'com.pakius.BqSchemaGeneratorPlugin'
+            implementationClass = 'com.pakius.plugin.BqSchemaGeneratorPlugin'
         }
     }
 }
 
 dependencies {
    compile gradleApi()
-    compile group: 'io.github.classgraph', name: 'classgraph', version: '4.8.65'
-    compile project(':bq-schema-generator')
+    compile group: 'com.google.cloud', name: 'google-cloud-bigquery', version: '1.108.1'
     testCompile 'junit:junit:4.12'
 }
 

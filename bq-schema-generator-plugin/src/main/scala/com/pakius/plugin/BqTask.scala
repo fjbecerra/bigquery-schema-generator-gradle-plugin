@@ -1,10 +1,10 @@
-package com.pakius
+package com.pakius.plugin
 
 import java.io.{File, FileNotFoundException, PrintWriter}
 import java.net.{URL, URLClassLoader}
 
-import com.pakius.SchemaParserImpl._
-import com.pakius.SchemaParserInstance._
+import com.pakius.parser.SchemaParserImpl._
+import com.pakius.parser.SchemaParserInstance._
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import org.slf4j.{Logger, LoggerFactory}

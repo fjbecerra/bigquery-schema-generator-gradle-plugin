@@ -3,8 +3,8 @@ package com.pakius.plugin
 import java.io.{File, FileNotFoundException, PrintWriter}
 import java.net.{URL, URLClassLoader}
 
-import com.pakius.parser.SchemaParserImpl._
-import com.pakius.parser.SchemaParserInstance._
+import com.pakius.parser.Bq._
+import com.pakius.parser.BqWriterInstance._
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import org.slf4j.{Logger, LoggerFactory}
@@ -47,7 +47,8 @@ class BqTask extends DefaultTask{
       clazzLst.asScala.toList
         .foreach{i => {
           val cls = loader.loadClass(i)
-          val content = pojosTobqSchemaPrettyJsonString(cls)
+
+          val content = cls.toBqSchema.toString
           new PrintWriter(s"${output}/${cls.getSimpleName}.json") { write(content); close() }}}
     }else{
       throw new FileNotFoundException("Jar file not found.")

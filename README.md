@@ -12,7 +12,7 @@ Using the plugins DSL:
 
 ```
 plugins {
-  id "com.pakius.bqSchemaGenerator" version "1.0.0"
+  id "com.pakius.bqSchemaGenerator" version "1.1.0"
 }
 
 ```
@@ -28,7 +28,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "com.pakius:bq-schema-generator-plugin:1.0.0"
+    classpath "com.pakius:bq-schema-generator-plugin:1.1.0"
   }
 }
 

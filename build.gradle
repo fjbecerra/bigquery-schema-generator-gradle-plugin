@@ -37,18 +37,12 @@ allprojects {
 
     plugins.withType(ScalaPlugin).whenPluginAdded {
 
-        configurations {
-            scalaCompilerPlugin
-        }
-
         ext {
             scalaVersion = "2.12.6"
             apacheBeamVersion = "2.11.0"
         }
 
         dependencies {
-            scalaCompilerPlugin "org.scalamacros:paradise_2.12.8:2.1.1"
-
             compile group: 'org.scala-lang', name: 'scala-library', version: scalaVersion
             compile group: 'org.scala-lang', name: 'scala-compiler', version: scalaVersion
             testCompile group: 'org.scalatest', name: 'scalatest_2.12', version: '3.0.4'
@@ -73,9 +67,8 @@ allprojects {
         tasks.withType(ScalaCompile) {
 
             scalaCompileOptions.additionalParameters = ["-unchecked", "-deprecation", "-feature", "-Xfatal-warnings", "-encoding", "utf8",
-                                                        "-Xplugin:" + configurations.scalaCompilerPlugin.asPath, "-language:implicitConversions",
+                                                        "-language:implicitConversions",
                                                         "-language:postfixOps",
-                                                        //"-Ymacro-debug-lite"
             ]
         }
 

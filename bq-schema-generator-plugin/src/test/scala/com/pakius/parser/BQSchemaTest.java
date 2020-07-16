@@ -27,3 +27,7 @@ class BQSchemaClass6 extends BQSchemaClass5 {
     private String field2;
 }
 
+class BQSchemaClass7 {
+    private BQSchemaClass6 field1;
+}
+
